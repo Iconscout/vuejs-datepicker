@@ -12,12 +12,14 @@
         class="next"
         :class="{'disabled': isRightNavDisabled}">&gt;</span>
     </header>
-    <span
-      class="cell year"
-      v-for="year in years"
-      :key="year.timestamp"
-      :class="{ 'selected': year.isSelected, 'disabled': year.isDisabled }"
-      @click.stop="selectYear(year)">{{ year.year }}</span>
+    <div>
+      <span
+        class="cell year"
+        v-for="year in years"
+        :key="year.timestamp"
+        :class="{ 'selected': year.isSelected, 'disabled': year.isDisabled }"
+        @click.stop="selectYear(year)">{{ year.year }}</span>
+    </div>
   </div>
 </template>
 <script>
